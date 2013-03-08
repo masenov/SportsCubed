@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />  
+		<link rel="stylesheet" type="text/css" href="cube.css"/>
+		<link rel="stylesheet" type="text/css" href="bootstrap.css"/>
+		<link href='http://fonts.googleapis.com/css?family=Corben' rel='stylesheet' type='text/css'>
+	</head>
+	<body style=" background: -webkit-linear-gradient(left, #2F2727, #1a82f7, #2F2727, #1a82f7, #2F2727);background: -moz-linear-gradient(left, #2F2727, #1a82f7, #2F2727, #1a82f7, #2F2727)">
+		
+		<div class="wrapper" style = "width: 100%; height:100%;">
+			<div id="cubeFrame">
+					<div id="cube">
+					<div class="face top" id = "top">
+						<div class="face_label">Activities Filter</div>
+						<div class="content_wrapper">
+							<div class="toggle-buttons">
+								<div class = "activities" id="football_toggler" for="checkbox-0"><label><p>Football</p><input type="checkbox" name="checkbox-0" id="checkbox-0" /><span></span></label></div>
+								<div class = "activities" id="basketball_toggler" for="checkbox-0"><label><p>Basketball</p><input type="checkbox" name="checkbox-0" id="checkbox-0" /><span></span></label></div>
+								<div class = "activities" id="golf_toggler" for="checkbox-0"><label><p>Golf</p><input type="checkbox" name="checkbox-0" id="checkbox-0" /><span></span></label></div>
+								<div class = "activities" id="swimming_toggler" for="checkbox-0"><label><p>Swimming</p><input type="checkbox" name="checkbox-0" id="checkbox-0" /><span></span></label></div>
+								<div class = "activities" id="cricket_toggler" for="checkbox-0"><label><p>Cricket</p><input type="checkbox" name="checkbox-0" id="checkbox-0" /><span></span></label></div>
+								<div class = "activities" id="bmx_toggler" for="checkbox-0"><label><p>BMX</p><input type="checkbox" name="checkbox-0" id="checkbox-0" /><span></span></label></div>
+							</div>
+						
+							<div class="toggle-buttons">
+								<div class = "activities" id="cycling_toggler" for="checkbox-0"><label><p>Cycling</p><input type="checkbox" name="checkbox-0" id="checkbox-0" /><span></span></label></div>
+								<div class = "activities" id="badminton_toggler" for="checkbox-0"><label><p>Badminton</p><input type="checkbox" name="checkbox-0" id="checkbox-0" /><span></span></label></div>
+								<div class = "activities" id="gym_toggler" for="checkbox-0"><label><p>Gym</p><input type="checkbox" name="checkbox-0" id="checkbox-0" /><span></span></label></div>
+								<div class = "activities" id="skateboarding_toggler" for="checkbox-0"><label><p>Skateboad</p><input type="checkbox" name="checkbox-0" id="checkbox-0" /><span></span></label></div>
+								<div class = "activities" id="gymnastics_toggler" for="checkbox-0"><label><p>Gymnastics</p><input type="checkbox" name="checkbox-0" id="checkbox-0" /><span></span></label></div>
+								<div class = "activities" id="tabletennis_toggler" for="checkbox-0"><label><p>Table tennis</p><input type="checkbox" name="checkbox-0" id="checkbox-0" /><span></span></label></div>
+							</div>
+						
+							<div class="toggle-buttons">
+								<div class = "activities" id="rugby_toggler" for="checkbox-0"><label><p>Rugby</p><input type="checkbox" name="checkbox-0" id="checkbox-0" /><span></span></label></div>
+								<div class = "activities" id="hockey_toggler" for="checkbox-0"><label><p>Hockey</p><input type="checkbox" name="checkbox-0" id="checkbox-0" /><span></span></label></div>
+								<div class = "activities" id="tennins_toggler" for="checkbox-0"><label><p>Tennis</p><input type="checkbox" name="checkbox-0" id="checkbox-0" /><span></span></label></div>
+								<div class = "activities" id="athletics_toggler" for="checkbox-0"><label><p>Athletics</p><input type="checkbox" name="checkbox-0" id="checkbox-0" /><span></span></label></div>
+								<div class = "activities" id="volleyball_toggler" for="checkbox-0"><label><p>Volleyball</p><input type="checkbox" name="checkbox-0" id="checkbox-0" /><span></span></label></div>
+								<div class = "activities" id="bowling_toggler" for="checkbox-0"><label><p>Bowling</p><input type="checkbox" name="checkbox-0" id="checkbox-0" /><span></span></label></div>
+							</div>
+						
+						</div>
+						
+						
+					</div>
+					
+					<div class="face front" id = "front">
+						<iframe id = "iMap" src="map.html" style = "width: 100%; height:100%" >
+							<p>Your browser does not support iframes.</p>
+						</iframe>
+					</div>
+					
+					<div class="face right" id = "right">
+						<div class="face_label">Price Filter</div>
+						<div id="price_wrapper">
+							<div class="toggle-buttons">
+								<div id="free_toggler" for="checkbox-0"><label><p style="font-size:50px; margin-bottom:20px;" >FREE</p><input type="checkbox" name="checkbox-0" id="price_checkbox" /><span></span></label></div>
+							</div>
+						</div>
+							<div id="price_selector">
+								<p> From: </p>
+								<input type="textbox" name="price_from" id="price_from" value="0" onkeypress="return isNumberKey(event)" />
+								<p> To: </p>
+								<input type="textbox" name="price_to" id="price_to" onkeypress="return isNumberKey(event)" placeholder="Please enter limit"/>
+							</div>
+						
+					</div>
+					
+					<div class="face left" id = "left">
+						<div class="face_label">Time Filter</div>
+						<div id="time_wrapper">
+							<div class="toggle-buttons">
+								<div id="wholeweek_toggler" for="checkbox-0"><label><p>Whole week</p><input type="checkbox" name="checkbox-0" id="checkbox-wholeweek" /><span></span></label></div>
+								<div id="monday_toggler" for="checkbox-0"><label><p>Monday</p><input type="checkbox" name="checkbox-0" id="checkbox-monday" /><span></span></label></div>
+								<div id="tuesday_toggler" for="checkbox-0"><label><p>Tuesday</p><input type="checkbox" name="checkbox-0" id="checkbox-tuesday" /><span></span></label></div>
+								<div id="wednesday_toggler" for="checkbox-0"><label><p>Wednesday</p><input type="checkbox" name="checkbox-0" id="checkbox-wednesday" /><span></span></label></div>
+
+							</div>
+							
+							<div class="toggle-buttons">
+								<div id="thursday_toggler" for="checkbox-0"><label><p>Thursday</p><input type="checkbox" name="checkbox-0" id="checkbox-thursday" /><span></span></label></div>
+								<div id="friday_toggler" for="checkbox-0"><label><p>Friday</p><input type="checkbox" name="checkbox-0" id="checkbox-friday" /><span></span></label></div>
+								<div id="saturday_toggler" for="checkbox-0"><label><p>Saturday</p><input type="checkbox" name="checkbox-0" id="checkbox-saturday" /><span></span></label></div>
+								<div id="sunday_toggler" for="checkbox-0"><label><p>Sunday</p><input type="checkbox" name="checkbox-0" id="checkbox-sunday" /><span></span></label></div>
+							</div>
+						</div>
+					</div>
+					<div class="face bottom" id = "bottom">
+						<img src="logo1.png" style="position: absolute; top: 30px; left: 0px;align:middle;width:500px">
+						<img src="arrowUp.png" style="position: absolute; top: 180px; left: 200px;align:middle;width:100px">
+						<img src="arrowLeft.png" style="position: absolute; top: 320px; left: 0px;align:middle;width:50px">
+						<img src="arrowRight.png" style="position: absolute; top: 320px; left: 450px;align:middle;width:50px">
+						<img src="Map.png" style="position: absolute; top: 220px; left: 200px;align:middle;width:100px">
+						<img src="Activities.png" style="position: absolute; top: 270px; left: 150px;align:middle;width:200px">
+						<img src="Price.png" style="position: absolute; top: 334px; left: 330px;align:middle;width:125px">
+						<img src="Time.png" style="position: absolute; top: 334px; left: 50px;align:middle;width:125px">
+						<img src="downSign.png" style="position: absolute; bottom: 20px; left: 150px;align:middle;width:220px">
+				</div>
+			</div>
+			<img src="city_council_logo.png" style="width:300px; height:77px;"/>
+		</div>
+		</div>
+		<script type="text/javascript" src="jquery.1.9.0.js"></script>
+		<script type="text/javascript" src="cube.js"></script>
+		<script type="text/javascript" >
+		
+			$(document).ready(function(){
+					setTimeout(function() {
+					var frame = document.getElementById("iMap"); 
+					var frameWin = ( frame.contentWindow || frame.contentDocument ); 
+					layers.push(frameWin.allLayer());}, 
+				500);
+			})
+			
+			layers = [];
+			activities = document.getElementsByClassName('activities');
+			activityType = [];
+			checkboxes = [];
+			free = document.getElementById('price_checkbox');
+			free.onclick=function(){ refineSearch(); };
+			priceFrom = document.getElementById('price_from');
+			priceTo = document.getElementById('price_to');
+			priceFrom.onchange=function(){ refineSearch(); };
+			priceTo.onchange=function(){ refineSearch(); };
+			monday = document.getElementById('checkbox-monday');
+			monday.onclick = function(){ refineSearch(); };
+			tuesday = document.getElementById('checkbox-tuesday');
+			tuesday.onclick = function(){ refineSearch(); };
+			wednesday = document.getElementById('checkbox-wednesday');
+			wednesday.onclick = function(){ refineSearch(); };
+			thursday = document.getElementById('checkbox-thursday');
+			thursday.onclick = function(){ refineSearch(); };
+			friday = document.getElementById('checkbox-friday');
+			friday.onclick = function(){ refineSearch(); };
+			saturday = document.getElementById('checkbox-saturday');
+			saturday.onclick = function(){ refineSearch(); };
+			sunday = document.getElementById('checkbox-sunday');
+			sunday.onclick = function(){ refineSearch(); };
+			document.getElementById('checkbox-wholeweek').onclick = function(){ refineSearch(); };
+			for( var i = 0 ; i < activities.length; i++ ) {
+				activityType.push( activities[i].getElementsByTagName('p')[0].innerHTML );
+				checkboxes.push( activities[i].getElementsByTagName('input')[0] );
+				//activities[i].getElementsByTagName('input')[0].checked = true;
+				activities[i].getElementsByTagName('input')[0].onclick=function(){ refineSearch(); };
+			}
+			
+			function refineSearch (){
+				var frame = document.getElementById("iMap");
+				var frameWin = ( frame.contentWindow || frame.contentDocument );
+				monday = document.getElementById('checkbox-monday');
+				monday.onclick = function(){ refineSearch(); };
+				tuesday = document.getElementById('checkbox-tuesday');
+				tuesday.onclick = function(){ refineSearch(); };
+				wednesday = document.getElementById('checkbox-wednesday');
+				wednesday.onclick = function(){ refineSearch(); };
+				thursday = document.getElementById('checkbox-thursday');
+				thursday.onclick = function(){ refineSearch(); };
+				friday = document.getElementById('checkbox-friday');
+				friday.onclick = function(){ refineSearch(); };
+				saturday = document.getElementById('checkbox-saturday');
+				saturday.onclick = function(){ refineSearch(); };
+				sunday = document.getElementById('checkbox-sunday');
+				sunday.onclick = function(){ refineSearch(); };
+				document.getElementById('checkbox-wholeweek').onclick = function(){ refineSearch(); };
+				for ( var i = 0 ; i < layers.length; i++ ) {
+					layers[i].setMap(null);
+				}
+				if ( monday.checked === true ) {
+					for ( var i = 0 ; i < activities.length; i++ ){
+						if ( checkboxes[i].checked === true ) {
+							if ( free.checked === true || priceFrom.value == "0" )
+								layers.push(frameWin.createLayer("'Activities' CONTAINS '" + activityType[i] + "' AND 'Prices' = 'Free' AND 'Opening hours' CONTAINS 'Monday' "));
+							if ( free.checked !== true )
+								layers.push(frameWin.createLayer("'Activities' CONTAINS '" + activityType[i] + "' AND 'Prices' >= '" + priceFrom.value + "' AND 'Prices' <= '" + priceTo.value + "' AND 'Opening hours' CONTAINS 'Monday'"));
+						}
+					}
+				}
+				if ( tuesday.checked === true ) {
+					for ( var i = 0 ; i < activities.length; i++ ){
+						if ( checkboxes[i].checked === true ) {
+							if ( free.checked === true || priceFrom.value == "0" )
+								layers.push(frameWin.createLayer("'Activities' CONTAINS '" + activityType[i] + "' AND 'Prices' = 'Free' AND 'Opening hours' CONTAINS 'Tuesday' "));
+							if ( free.checked !== true )
+								layers.push(frameWin.createLayer("'Activities' CONTAINS '" + activityType[i] + "' AND 'Prices' >= '" + priceFrom.value + "' AND 'Prices' <= '" + priceTo.value + "' AND 'Opening hours' CONTAINS 'Tuesday'"));
+						}
+					}
+				}
+				if ( wednesday.checked === true ) {
+					for ( var i = 0 ; i < activities.length; i++ ){
+						if ( checkboxes[i].checked === true ) {
+							if ( free.checked === true || priceFrom.value == "0" )
+								layers.push(frameWin.createLayer("'Activities' CONTAINS '" + activityType[i] + "' AND 'Prices' = 'Free' AND 'Opening hours' CONTAINS 'Wednesday' "));
+							if ( free.checked !== true )
+								layers.push(frameWin.createLayer("'Activities' CONTAINS '" + activityType[i] + "' AND 'Prices' >= '" + priceFrom.value + "' AND 'Prices' <= '" + priceTo.value + "' AND 'Opening hours' CONTAINS 'Wednesday'"));
+						}
+					}
+				}
+				if ( thursday.checked === true ) {
+					for ( var i = 0 ; i < activities.length; i++ ){
+						if ( checkboxes[i].checked === true ) {
+							if ( free.checked === true || priceFrom.value == "0" )
+								layers.push(frameWin.createLayer("'Activities' CONTAINS '" + activityType[i] + "' AND 'Prices' = 'Free' AND 'Opening hours' CONTAINS 'Thursday' "));
+							if ( free.checked !== true )
+								layers.push(frameWin.createLayer("'Activities' CONTAINS '" + activityType[i] + "' AND 'Prices' >= '" + priceFrom.value + "' AND 'Prices' <= '" + priceTo.value + "' AND 'Opening hours' CONTAINS 'Thursday'"));
+						}
+					}
+				}
+				if ( friday.checked === true ) {
+					for ( var i = 0 ; i < activities.length; i++ ){
+						if ( checkboxes[i].checked === true ) {
+							if ( free.checked === true || priceFrom.value == "0" )
+								layers.push(frameWin.createLayer("'Activities' CONTAINS '" + activityType[i] + "' AND 'Prices' = 'Free' AND 'Opening hours' CONTAINS 'Friday' "));
+							if ( free.checked !== true )
+								layers.push(frameWin.createLayer("'Activities' CONTAINS '" + activityType[i] + "' AND 'Prices' >= '" + priceFrom.value + "' AND 'Prices' <= '" + priceTo.value + "' AND 'Opening hours' CONTAINS 'Friday'"));
+						}
+					}
+				}
+				if ( saturday.checked === true ) {
+					for ( var i = 0 ; i < activities.length; i++ ){
+						if ( checkboxes[i].checked === true ) {
+							if ( free.checked === true || priceFrom.value == "0" )
+								layers.push(frameWin.createLayer("'Activities' CONTAINS '" + activityType[i] + "' AND 'Prices' = 'Free' AND 'Opening hours' CONTAINS 'Saturday' "));
+							if ( free.checked !== true )
+								layers.push(frameWin.createLayer("'Activities' CONTAINS '" + activityType[i] + "' AND 'Prices' >= '" + priceFrom.value + "' AND 'Prices' <= '" + priceTo.value + "' AND 'Opening hours' CONTAINS 'Saturday'"));
+						}
+					}
+				}
+				if ( sunday.checked === true ) {
+					for ( var i = 0 ; i < activities.length; i++ ){
+						if ( checkboxes[i].checked === true ) {
+							if ( free.checked === true || priceFrom.value == "0" )
+								layers.push(frameWin.createLayer("'Activities' CONTAINS '" + activityType[i] + "' AND 'Prices' = 'Free' AND 'Opening hours' CONTAINS 'Sunday' "));
+							if ( free.checked !== true )
+								layers.push(frameWin.createLayer("'Activities' CONTAINS '" + activityType[i] + "' AND 'Prices' >= '" + priceFrom.value + "' AND 'Prices' <= '" + priceTo.value + "' AND 'Opening hours' CONTAINS 'Sunday'"));
+						}
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
